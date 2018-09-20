@@ -96,6 +96,7 @@ def get_data_from_quandl(data):
         data_name = quandl.get(data_api,authtoken='r4HFZkruAmhhszee71tK')
         data_list.append(data_name)        
 
+            
 def get_info(data_list):
     
     '''
@@ -214,6 +215,7 @@ def concat_and_colname(all_df, col_names):
     x.sort_index(ascending=False)
     return x
 
+
 read_df(LME)
 df_LME = concat_and_colname(all_df, LME_name)
 df_LME.info()
@@ -257,6 +259,7 @@ def fill_na():
     df = result
     return df
 
+
 get_time_period(df)
 df = fill_na()
 df.info()
@@ -289,6 +292,7 @@ def find_unusual_value():
     return find_zero[number]
 
 find_unusual_value()
+
 
 '''Replace the 0 value'''
 sum(df['Nikkei']==0)
@@ -342,6 +346,7 @@ def PCA_importance():
     plt.xticks(rotation=60)
     plt.titles('Screen Plot')
 
+            
 def select_product():
     each_ration = np.round(pca.explained_variance_ratio_* 100,2)
     pca_table = pd.DataFrame(pca.components_.T, 

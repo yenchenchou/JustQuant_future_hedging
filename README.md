@@ -4,6 +4,7 @@
 The goal is getting 42 items of futures historical data from Quandl API then use PCA to generate a hedged portfolio automatically.  
 
 ## Prerequisites
+Bofore we start, these packages are required for our hedging:
 ```Python
 import quandl
 import os
